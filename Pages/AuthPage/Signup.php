@@ -61,6 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body class="body-signup">
+    <h1>JUIT Outpass Management System</h1>
     <div class="signup-container">
         <form class="signup-form" method="post">
             <h1 class="signup-title">Student & Parent Signup</h1>

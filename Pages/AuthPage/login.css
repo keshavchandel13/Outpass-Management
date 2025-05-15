@@ -5,6 +5,11 @@
     padding: 0;
 }
 
+h1 {
+
+    text-align: center;
+}
+
 .login-container {
     width: 100%;
     max-width: 400px;
@@ -12,7 +17,7 @@
     background: #fff;
     padding: 30px 40px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .login-form {

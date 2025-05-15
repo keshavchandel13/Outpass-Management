@@ -8,6 +8,6 @@
 
     // Check connection
     if($conn->connect_error){
-        die("connection failed". $conn->connect->error);
+        die("Connection failed: " . $conn->connect_error);
     }
 ?>

@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_result($id, $name, $role, $db_pass);
         $stmt->fetch();
 
-        if ($password === $db_pass) {  
+        if ($password === $db_pass) {
             $_SESSION['id'] = $id;
             $_SESSION['name'] = $name;
             $_SESSION['role'] = $role;
@@ -31,6 +31,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: ../parent/parent_dashboard.php");
             } elseif ($role == 'warden') {
                 header("Location: ../warden/warden_dashboard.php");
+            }
+            elseif ($role == 'guard'){
+                header("Location: ../guard/guard_dashboard.php");
+            }
+            elseif ($role == 'admin'){
+                header("Location: ../admin/admin_dashboard.php");
             }
             exit;
         } else {
@@ -53,76 +59,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <title>Login Page</title>
     <link rel="stylesheet" href="login.css">
-    <style>
-        .body-login {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
-
-        .login-container {
-            width: 100%;
-            max-width: 400px;
-            margin: 80px auto;
-            background: #fff;
-            padding: 30px 40px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .login-form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .login-title {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .login-input {
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 15px;
-        }
-
-        .login-button {
-            padding: 10px;
-            margin-top: 15px;
-            background-color: #4CAF50;
-            color: white;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .login-button:hover {
-            background-color: #45a049;
-        }
-
-        .login-form p {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 14px;
-        }
-
-        .login-form a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        .login-form a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="typeWriter.css">
 </head>
 
 <body class="body-login">
+    <div class="typewriter-container ">
+        <h1 class="typewriter ">JUIT Outpass Management System</h1>
+    </div>
     <div class="login-container">
         <form class="login-form" method="post">
             <h1 class="login-title">Login</h1>

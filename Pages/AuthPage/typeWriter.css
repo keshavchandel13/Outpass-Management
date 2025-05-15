@@ -1,0 +1,36 @@
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  width: 0;
+  animation:
+    typing 3.5s steps(40, end) 1s forwards,
+    repeat-typing 9s steps(40, end) infinite,
+    blink-caret 0.75s step-end infinite;
+    animation-delay: 0s;
+}
+
+
+.typewriter-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Keyframes */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
+@keyframes repeat-typing {
+  0%, 20%   { width: 0; }
+  40%, 60%  { width: 80%; }
+  80%, 100% { width: 0; }
+}

@@ -4,7 +4,7 @@ include '../../database/connectDb.php';
 
 // Check if logged in and role is student
 if (!isset($_SESSION['id']) || $_SESSION['role'] !== 'student') {
-    header("Location: /Go local/Pages/AuthPage/login.php");
+    header("Location: /outpass/Pages/AuthPage/login.php");
     exit();
 }
 
@@ -53,7 +53,7 @@ $result = $stmt->get_result();
                 </tr>
             <?php endwhile; ?>
         </table>
-        <a href="../AuthPage/logout.php">Logout</a>
+        <a href="../AuthPage/login.php">Logout</a>
     </div>
 </body>
 
